@@ -1,0 +1,21 @@
+# http://module-build.sourceforge.net/META-spec.html
+#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
+name:         Pod-Multi
+version:      0.06
+version_from: lib/Pod/Multi.pm
+installdirs:  site
+requires:
+    Carp:                          0
+    Data::Dumper:                  0
+    File::Basename:                0
+    File::Path:                    0
+    File::Save::Home:              0.03
+    File::Spec:                    0
+    IO::Capture:                   0.05
+    Pod::Html:                     0
+    Pod::Man:                      0
+    Pod::Text:                     0
+    Test::Simple:                  0.44
+
+distribution_type: module
+generated_by: ExtUtils::MakeMaker version 6.30
