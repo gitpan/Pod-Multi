@@ -59,7 +59,7 @@ my %pred = (
     ok(-f "$tempdir/$pred{html}", "pod2html worked");
 
     like(stringify("$tempdir/$pred{html}"), 
-        qr{<title>s1</title>},
+        qr{<title>s1<\/title>},
        "HTML title tag located");
 
     ok(chdir $cwd, "Changed back to original directory");

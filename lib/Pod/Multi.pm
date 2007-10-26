@@ -5,7 +5,7 @@ use strict;
 use warnings;
 use Exporter ();
 our ($VERSION, @ISA, @EXPORT, @EXPORT_OK);
-$VERSION     = 0.06;
+$VERSION     = 0.07;
 @ISA         = qw( Exporter );
 @EXPORT      = qw( pod2multi );
 @EXPORT_OK   = qw( make_options_defaults );
@@ -145,7 +145,7 @@ sub make_options_defaults {
     local $Data::Dumper::Indent=1;
     local $Data::Dumper::Terse=1;
     print $FH '%params = ';
-    print $FH Data::Dumper->Dump( [ $optionsref ], [ qw/*options/ ]  );
+    print {$FH} Data::Dumper->Dump( [ $optionsref ], [ qw/*options/ ]  );
     print $FH ";\n";
     close $FH or croak "Unable to close handle to $personal_defaults_file";
     return 1;

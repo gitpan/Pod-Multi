@@ -1,10 +1,11 @@
-# http://module-build.sourceforge.net/META-spec.html
-#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
-name:         Pod-Multi
-version:      0.06
-version_from: lib/Pod/Multi.pm
-installdirs:  site
-requires:
+--- #YAML:1.0
+name:                Pod-Multi
+version:             0.07
+abstract:            pod2man, pod2text, pod2html simultaneously
+license:             ~
+generated_by:        ExtUtils::MakeMaker version 6.32
+distribution_type:   module
+requires:     
     Carp:                          0
     Data::Dumper:                  0
     File::Basename:                0
@@ -16,6 +17,8 @@ requires:
     Pod::Man:                      0
     Pod::Text:                     0
     Test::Simple:                  0.44
-
-distribution_type: module
-generated_by: ExtUtils::MakeMaker version 6.30
+meta-spec:
+    url:     http://module-build.sourceforge.net/META-spec-v1.2.html
+    version: 1.2
+author:
+    - James E Keenan (jkeenan@cpan.org)
