@@ -1,11 +1,11 @@
 package Pod::Multi;
-#$Id#
+#$Id: Multi.pm 1200 2007-10-27 01:18:28Z jimk $
 require 5.006001;
 use strict;
 use warnings;
 use Exporter ();
 our ($VERSION, @ISA, @EXPORT, @EXPORT_OK);
-$VERSION     = 0.07;
+$VERSION     = 0.08;
 @ISA         = qw( Exporter );
 @EXPORT      = qw( pod2multi );
 @EXPORT_OK   = qw( make_options_defaults );
@@ -19,6 +19,7 @@ use File::Spec;
 use File::Save::Home qw(
     get_home_directory
 );
+#use Data::Dumper;
 
 sub pod2multi {
     croak "Must supply even number of arguments:  list of key-value pairs"
@@ -42,7 +43,8 @@ sub pod2multi {
     # defaults file.  Those values will be overriden with any defined in a 
     # Perl script and passed to pod2multi() as arguments.
 
-    if (defined %params) {
+#    if (defined %params) {
+    if (%params) {
         foreach my $outputformat (keys %params) {
             croak "Value of personal defaults option $outputformat must be a hash ref"
             unless ref($params{$outputformat}) eq 'HASH';
@@ -117,7 +119,7 @@ sub pod2multi {
     if (defined $params{html}{infile}) {
         croak "You cannot define a source file for the HTML output different from that of the text and man outputs";
     }
-    %{$options{html}} = defined $params{html} ?  %{$params{html}} : ();
+    %{$options{html}} = %{$params{html}} ?  %{$params{html}} : ();
     $options{html}{infile} = $pod;
     $options{html}{outfile} = "$path$basename.html" 
         unless defined $params{html}{outfile};

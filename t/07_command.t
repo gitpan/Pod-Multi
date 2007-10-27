@@ -1,4 +1,5 @@
 # t/07_command.t - test command-line interface pod2multi
+#$Id: 07_command.t 1201 2007-10-27 01:22:17Z jimk $
 use strict;
 use warnings;
 use Test::More 
@@ -76,7 +77,7 @@ my %pred = (
 
     # test that html title tag was set
     like(stringify("$tempdir/$pred{html}"), 
-        qr{<title>This\sis\sthe\sHTML\stitle<\/title>},
+        qr{<title>This\sis\sthe\sHTML\stitle<\/title>}i,
        "HTML title tag located");
 
     ok(chdir $cwd, "Changed back to original directory");

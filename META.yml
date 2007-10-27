@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                Pod-Multi
-version:             0.07
+version:             0.08
 abstract:            pod2man, pod2text, pod2html simultaneously
 license:             ~
 generated_by:        ExtUtils::MakeMaker version 6.32

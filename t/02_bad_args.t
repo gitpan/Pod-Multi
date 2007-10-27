@@ -1,4 +1,5 @@
 # t/02_bad_args.t - check handling of bad arguments
+#$Id: 02_bad_args.t 1201 2007-10-27 01:22:17Z jimk $
 use strict;
 use warnings;
 use Test::More 

@@ -1,4 +1,5 @@
 # t/09_bad_personal_defaults.t - check what happens with defective personal
+#$Id: 09_bad_personal_defaults.t 1201 2007-10-27 01:22:17Z jimk $
 # defaults file
 use strict;
 use warnings;
@@ -30,13 +31,6 @@ my $target_ref = conceal_target_file( {
 } );
 
 my $cwd = cwd();
-
-#my $prepref = _subclass_preparatory_tests($cwd);
-#my $persref         = $prepref->{persref};
-#my $pers_def_ref    = $prepref->{pers_def_ref};
-#my %els1            = %{ $prepref->{initial_els_ref} };
-#my $eumm_dir        = $prepref->{eumm_dir};
-#my $mmkr_dir_ref    = $prepref->{mmkr_dir_ref};
 
 my $pod = "$cwd/t/lib/s1.pod";
 ok(-f $pod, "pod sample file located");
