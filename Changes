@@ -1,5 +1,8 @@
-#$Id: Changes 1201 2007-10-27 01:22:17Z jimk $
+#$Id: Changes 1202 2007-10-27 15:12:03Z jimk $
 Changes for Pod::Multi
+
+0.09 Sat Oct 27 11:09:57 EDT 2007
+    - Require 5.8.
 
 0.08 Fri Oct 26 20:25:59 EDT 2007
     - Should not use 'defined' on aggregates such as %params.  Correct this in
